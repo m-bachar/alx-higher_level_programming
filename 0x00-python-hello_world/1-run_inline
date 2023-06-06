@@ -1,10 +1,3 @@
 #!/bin/bash
 
-python_code="$PYCODE"
-
-temp_file=$(mktemp)
-echo "$PYCODE" > "$temp_file"
-
-python3 $temp_file
-
-rm "$temp_file"
+python3 -c "$PYCODE"
